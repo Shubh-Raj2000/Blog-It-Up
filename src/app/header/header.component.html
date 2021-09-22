@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <span><a routerLink="/">My Application</a> </span>
+    <span class="spacer"></span>
+
+    <span >
+        <a mat-button routerLink="/view-posts" routerLinkActive="mat-accent" ><h2> My Feed</h2></a>
+    </span>
+    <span *ngIf="userIsAuthenticated">
+        <a mat-button routerLink="/create-post" routerLinkActive="mat-accent"><h2> New Post</h2> </a>
+    </span>
+    <span *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="/login" routerLinkActive="mat-accent"><h2> Login </h2> </a>
+    </span>
+    <span *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="/signup" routerLinkActive="mat-accent"><h2> Signup </h2> </a>
+    </span>
+    <span *ngIf="userIsAuthenticated">
+        <button mat-button routerLinkActive="mat-accent" (click)="onLogout()">Logout</button>
+    </span>
+</mat-toolbar>

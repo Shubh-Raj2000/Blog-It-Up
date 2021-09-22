@@ -1,0 +1,13 @@
+mat-form-field 
+{
+    width: 100%;
+}
+
+body{
+    width: 20%;
+}
+
+.signup-body{
+    width: 50%;
+    margin: auto;
+}
